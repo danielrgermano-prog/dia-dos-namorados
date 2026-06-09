@@ -1,0 +1,333 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nosso Dia dos Namorados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="ambient-hearts" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <section class="hero reveal" aria-labelledby="titulo">
+        <div class="hero-copy">
+          <p class="eyebrow">Dia dos Namorados • Nosso cantinho</p>
+          <h1 id="titulo">Um presente em rosa para lembrar o quanto eu amo você.</h1>
+          <p class="hero-text">
+            Eu quis transformar as nossas fotos, as nossas memórias e o jeito que eu te vejo
+            em um lugar só. Um presente para você abrir com calma e sentir, em cada detalhe,
+            o tamanho do meu amor.
+          </p>
+          <div class="hero-meta">
+            <span>Daniel</span>
+            <span class="heart-mark" aria-hidden="true">♥</span>
+            <span>Raylla</span>
+          </div>
+          <div class="hero-actions">
+            <a class="action-button action-button--primary" href="#joguinho">Joguinho nosso</a>
+            <a class="action-button action-button--ghost" href="#galeria">Ver nossas fotos</a>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <div class="floating-tag floating-tag--top">meu lugar favorito</div>
+          <figure class="hero-photo">
+            <img src="imagens/preferida.jpeg" alt="Foto especial do casal">
+          </figure>
+          <div class="floating-tag floating-tag--bottom">Nossa foto preferida</div>
+        </div>
+      </section>
+
+      <section class="intro-card reveal" aria-label="Mensagem de abertura">
+        <p>
+          Amor, eu quis fazer uma surpresa com a nossa cara: delicada, bonita, cheia de fotos,
+          lembranças e um pouquinho de brincadeira. Tem momentos nossos espalhados aqui,
+          porque amar você também é ter vontade de guardar tudo.
+        </p>
+      </section>
+
+      <section class="section-shell game-section reveal" id="joguinho" aria-labelledby="joguinho-titulo">
+        <div class="section-copy">
+          <p class="eyebrow">Joguinho de palavras</p>
+          <h2 id="joguinho-titulo">O que eu mais amo em você</h2>
+          <p>
+            Cada palavra foi escolhida pensando no jeito como você ilumina a minha vida.
+            Vai clicando nas letras e descobrindo um pedacinho do que eu sinto.
+          </p>
+        </div>
+
+        <div class="love-game" aria-live="polite">
+          <div class="game-confetti" id="game-confetti" aria-hidden="true"></div>
+          <div class="game-topbar">
+            <div class="game-progress" id="game-progress" aria-label="Progresso do joguinho"></div>
+            <button class="ghost-button" id="game-reset" type="button">Recomeçar</button>
+          </div>
+          <p class="game-hint-label">Dica do momento</p>
+          <h3 class="game-hint" id="game-hint"></h3>
+          <div class="game-word" id="game-word"></div>
+          <div class="game-keyboard" id="game-keyboard"></div>
+          <p class="game-feedback" id="game-feedback"></p>
+
+          <div class="game-success" id="game-success" hidden>
+            <p class="eyebrow success-eyebrow">Parabéns</p>
+            <h4 class="game-answer" id="game-answer"></h4>
+            <p class="game-quote" id="game-quote"></p>
+            <button class="action-button action-button--primary action-button--wide" id="game-next" type="button">Próxima palavra</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell gallery-section reveal" id="galeria" aria-labelledby="galeria-titulo">
+        <div class="section-copy section-copy--center">
+          <p class="eyebrow">Álbum suspenso</p>
+          <h2 id="galeria-titulo">Todas as nossas fotos passando uma por uma</h2>
+          <p>
+            Eu deixei essa parte só para a gente revisitar cada memória com calma.
+            Pode clicar nas laterais, nas setas ou nos pontinhos.
+          </p>
+        </div>
+
+        <div class="photo-carousel">
+          <button class="gallery-button gallery-button--prev" id="gallery-prev" type="button" aria-label="Foto anterior">‹</button>
+          <div class="photo-stage" id="photo-stage">
+            <article class="photo-card photo-card--prev" data-gallery-slot="prev" tabindex="0" aria-label="Foto anterior">‹</article>
+            <article class="photo-card photo-card--active" data-gallery-slot="active"></article>
+            <article class="photo-card photo-card--next" data-gallery-slot="next" tabindex="0" aria-label="Próxima foto">›</article>
+          </div>
+          <button class="gallery-button gallery-button--next" id="gallery-next" type="button" aria-label="Próxima foto">›</button>
+        </div>
+
+        <div class="gallery-footer">
+          <p class="gallery-caption" id="gallery-caption"></p>
+          <div class="gallery-dots" id="gallery-dots" aria-label="Selecionar foto"></div>
+        </div>
+      </section>
+
+      <section class="timeline-shell reveal" aria-labelledby="timeline-titulo">
+        <div class="section-copy section-copy--center">
+          <p class="eyebrow">Linha do tempo</p>
+          <h2 id="timeline-titulo">Os capítulos que já têm o nosso nome</h2>
+        </div>
+
+        <div class="timeline" aria-label="Linha do tempo do casal">
+          <article class="moment">
+            <div class="marker">
+              <span>01</span>
+            </div>
+            <div class="moment-card">
+              <div class="photo-slot">
+                <img src="imagens/WhatsApp Image 2026-05-30 at 00.25.33.jpeg" alt="Momento especial do começo da história">
+              </div>
+              <div class="moment-content">
+                <p class="date">Capítulo um</p>
+                <h3>Nossa primeira foto juntos</h3>
+                <p class="place">Amor aqui eu já gostava de você e eu ja tinha até me declarado...</p>
+                <p>
+                  Princesa aqui eu já gostava muito de você e tinha certeza que era a mulher da minha vida.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="moment">
+            <div class="marker">
+              <span>02</span>
+            </div>
+            <div class="moment-card">
+              <div class="photo-slot">
+                <img src="imagens/WhatsApp Image 2026-05-30 at 00.25.34.jpeg" alt="Foto de um passeio especial do casal">
+              </div>
+              <div class="moment-content">
+                <p class="date">Capítulo dois</p>
+                <h3>Nosso primeiro date juntos</h3>
+                <p class="place">uma comida que marcou (hambúrguer)</p>
+                <p>
+                 Aqui foi o momento em que você disse que gostava de mim. Foi um dos dias mais felizes da minha vida, porque ali eu descobri que tudo o que eu sentia era recíproco.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="moment">
+            <div class="marker">
+              <span>03</span>
+            </div>
+            <div class="moment-card">
+              <div class="photo-slot">
+                <img src="imagens/namoro.jpeg" alt="Foto sobre o futuro do casal">
+              </div>
+              <div class="moment-content">
+                <p class="date">Capítulo três</p>
+                <h3>Onde tudo começou dia 05/02</h3>
+                <p class="place">Nós dois estávamos muito nervosos mas foi uma das melhores escolhas da minha vida.</p>
+                <p>
+                  O meu amor por você também mora no futuro. Nos planos, nas promessas sinceras,
+                  nos sonhos em comum e em tudo aquilo que ainda vai ser mais bonito porque vai ser com você.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="moment">
+            <div class="marker">
+              <span>04</span>
+            </div>
+            <div class="moment-card">
+              <div class="photo-slot">
+                <img src="imagens/WhatsApp Image 2026-05-30 at 00.25.35.jpeg" alt="Foto de um lugar importante para o casal">
+              </div>
+              <div class="moment-content">
+                <p class="date">Capítulo quatro</p>
+                <h3>Quando fomos pela primeira vez combinando</h3>
+                <p class="place">Amor primeira vez que fomos juntos como namorados na igreja (eu te amo)</p>
+                <p>
+                 Amor esse dia foi muito bom, fomos pela primeira vez na casa do Senhor como namorados amo cada dia que vou na igreja com você minha linda.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="moment">
+            <div class="marker">
+              <span>05</span>
+            </div>
+            <div class="moment-card">
+              <div class="photo-slot">
+                <img src="imagens/WhatsApp Image 2026-05-30 at 00.25.36.jpeg" alt="Foto favorita do casal">
+              </div>
+              <div class="moment-content">
+                <p class="date">Capítulo cinco</p>
+                <h3>Outra foto nossa combinando (eu gosto muito dessa foto)</h3>
+                <p class="place">Primeira vez que fomos na sede juntos como namorados</p>
+                <p>
+                    Hoje em dia quando vou sem você na igreja fico deslocado acho muito estranho quando não estamos juntos.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="moment">
+            <div class="marker">
+              <span>06</span>
+            </div>
+            <div class="moment-card">
+              <div class="photo-slot photo-slot--shift-right">
+                <img src="imagens/WhatsApp Image 2026-05-30 at 00.25.35 (3).jpeg" alt="Foto sobre o futuro do casal">
+              </div>
+              <div class="moment-content">
+                <p class="date">Primeira vez que você veio em casa como namorada</p>
+                <h3>Amor foi muito bom esse dia onde assistimos carros nosso primeiro filme que vemos juntos.</h3>
+                <p class="place">Primeira vez que assistimos filme e eu me vi casado com você.</p>
+                <p>
+                  Amor foi muito bom esse dia porque foi o dia que você falou que me AMAVA e eu fiquei tão felizzzz de verdade.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="moment">
+            <div class="marker">
+              <span>07</span>
+            </div>
+            <div class="moment-card">
+              <div class="photo-slot">
+                <img src="imagens/Futuro.jpeg" alt="futuro nosso">
+              </div>
+              <div class="moment-content">
+                <p class="date">Temos o futuro todo pela frente</p>
+                <h3>Amor essa foto ficou incrível e acho ela muito boa</h3>
+                <p class="place">Eu poderia citar muitos e muitos momentos que passamos juntos pois eu amo todos e amo estar ao seu lado</p>
+                <p>
+                  Amor eu vou te amar para sempre e quero muito passar o resto da minha vida ao seu lado princesa, <strong>EU TE AMO</strong>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="closing reveal" aria-label="Mensagem final">
+        <p>Feliz Dia dos Namorados, meu amor.</p>
+        <strong>Com você, até os dias comuns parecem presentes abertos devagar.</strong>
+      </section>
+
+      <section class="future-dream reveal" aria-labelledby="sonhos-titulo">
+        <div class="future-copy">
+          <p class="eyebrow">Nossos próximos sonhos</p>
+          <h2 id="sonhos-titulo">Ainda quero uma vida inteira do seu lado</h2>
+          <p>
+            Meu sonho é continuar olhando para você com esse mesmo encantamento de agora,
+            mas com ainda mais história, ainda mais lembranças e ainda mais amor construído junto.
+          </p>
+          <p>
+            Eu quero viver as fases bonitas que Deus ainda vai escrever para nós: o nosso
+            casamento, os nossos filhos, a nossa casa cheia de amor e uma família sendo
+            construída com carinho, paciência e cumplicidade.
+          </p>
+        </div>
+
+        <div class="dream-goals" aria-label="Metas para o nosso futuro">
+          <article class="dream-goal-card dream-goal-card--done">
+            <figure class="dream-photo">
+              <img src="imagens/namoro.jpeg" alt="Namoro como meta ja cumprida pelo casal">
+            </figure>
+            <div class="dream-goal-content">
+              <div class="dream-goal-topline">
+                <span>Meta 01</span>
+                <strong class="dream-status dream-status--done" aria-label="Meta cumprida">&#10003;</strong>
+              </div>
+              <h3>Namorar com você</h3>
+              <p>Essa meta a gente já realizou, e foi uma das escolhas mais lindas da minha vida.</p>
+            </div>
+          </article>
+
+          <article class="dream-goal-card">
+            <figure class="dream-photo">
+              <img src="imagens/casamento.jpeg" alt="Casamento como meta do casal">
+            </figure>
+            <div class="dream-goal-content">
+              <div class="dream-goal-topline">
+                <span>Meta 02</span>
+                <strong class="dream-status">Pendente</strong>
+              </div>
+              <h3>Casar com você</h3>
+              <p>Prometer diante de Deus e da vida que eu escolho você todos os dias.</p>
+            </div>
+          </article>
+
+          <article class="dream-goal-card">
+            <figure class="dream-photo">
+              <img src="imagens/download.jpeg" alt="Filhos como sonho do casal">
+            </figure>
+            <div class="dream-goal-content">
+              <div class="dream-goal-topline">
+                <span>Meta 03</span>
+                <strong class="dream-status">Pendente</strong>
+              </div>
+              <h3>Ter nossos filhos</h3>
+              <p>Ver o nosso amor crescendo em pequenos sorrisos, abraços e histórias novas.</p>
+            </div>
+          </article>
+
+          <article class="dream-goal-card">
+            <figure class="dream-photo">
+              <img src="imagens/download-_1_.jpeg" alt="Família e vida inteira ao lado de quem se ama">
+            </figure>
+            <div class="dream-goal-content">
+              <div class="dream-goal-topline">
+                <span>Meta 04</span>
+                <strong class="dream-status">Pendente</strong>
+              </div>
+              <h3>Construir nossa família</h3>
+              <p>Um lar nosso, uma vida tranquila, muitos planos realizados e a certeza de envelhecer ao seu lado.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
