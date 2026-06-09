@@ -113,6 +113,12 @@ a {
 }
 
 .reveal {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+.reveal-ready .reveal {
   opacity: 0;
   transform: translateY(28px) scale(0.985);
   transition:
@@ -122,7 +128,7 @@ a {
   will-change: opacity, transform;
 }
 
-.reveal.is-visible {
+.reveal-ready .reveal.is-visible {
   opacity: 1;
   transform: translateY(0) scale(1);
   will-change: auto;

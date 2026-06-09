@@ -154,6 +154,8 @@ function initReveal() {
     return;
   }
 
+  document.body.classList.add("reveal-ready");
+
   items.forEach((item, index) => {
     item.style.setProperty("--reveal-delay", `${Math.min(index * 120, 600)}ms`);
   });
